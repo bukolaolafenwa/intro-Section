@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Intro section with dropdown navigation</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="m-5">
+
+  <!-- nav bar -->
+ <div class="flex justify-between">
+  
+    <div class="flex gap-[30px] ">
+   <div>
+    <img src="./images/logo.svg" alt=" logo">
+   </div>
+
+   <div class="hidden md:flex md:gap-7">
+   
+ <a class="text-[hsl(0,0%,41%)] hover:cursor-pointer hover:text-[hsl(0,0%,8%)]" href="#">Features</a>
+    <a class="text-[hsl(0,0%,41%)] hover:cursor-pointer hover:text-[hsl(0,0%,8%)]" href="#">Company</a>
+   <a class="text-[hsl(0,0%,41%)] hover:cursor-pointer hover:text-[hsl(0,0%,8%)]" href="#">Careers</a> 
+    <a class="text-[hsl(0,0%,41%)] hover:cursor-pointer hover:text-[hsl(0,0%,8%)]" href="#">About</a>
+   </div>
+   </div>
+
+   <div>
+     <div class="block md:hidden">
+    <img src="./images/icon-menu.svg" alt="menu">
+   </div>
+
+   <div class=" hidden md:flex md:gap-10 md:items-center text-[hsl(0,0%,41%)]">
+    <a class="hover:cursor-pointer hover:text-[hsl(0,0%,8%)]" href="#">Login</a>
+    <button class="py-2 px-6 text border rounded-[12px] hover:cursor-pointer hover:text-[hsl(0,0%,8%)]">Register</button>
+   </div>
+   </div>
+
+
+ </div>
+   <!-- main  -->
+    <main class="md:mx-auto md:container md:w-11/12 ">
+      
+    <div>
+   <div class="mt-10 block md:hidden">
+    <img src="./images/image-hero-mobile.png" alt="">
+   </div>
+   <div class=" flex flex-row-reverse items-center justify-center lg:gap-30 md:gap-16  ">
+       <div class="hidden md:block  lg:block w-[600px] mt-10">
+         <img  class="lg:max-w-[500px] md:max-w-[300px]  " src="./images/image-hero-desktop.png" alt="">
+       </div>
+   
+
+      <div class="text-center flex flex-col mt-7 md:text-start  md:mt-20 ">
+    
+         <h1 class="text-4xl font-bold px-1 md:text-5xl lg:text-8xl lg:w-[590px]">Make remote work</h1>
+         <p class="font-sans-serif text-[hsl(0,0%,41%)] text-lg mt-15 lg:w-[390px] w-85 ">Get your team in sync, no matter your location. Streamline processes, 
+        create team rituals, and watch productivity soar.</p>
+        <div class=" justify-center ml-20 p-3 w-40 bg-black flex  mt-10 rounded-[15px] text-center md:m-0 md:mt-15 hover:cursor-pointer hover:bg-[hsl(0,0%,98%)]  hover:font-bold hover:border">
+       <button class="text-xl text-white font-bold font-sans-serif text-center hover:text-black mx-auto md:mx-0 ">Learn more</button></div>
+       <div class="grid grid-cols-4 gap-4 pt-20 md:pt-20 lg::pt-45 mt-25"> 
+          <img src="./images/client-databiz.svg" alt="">
+          <img src="./images/client-audiophile.svg" alt="">
+          <img src="./images/client-meet.svg" alt="">
+          <img src="./images/client-maker.svg" alt="">
+   </div>
+
+   </div>
+
+   
+   </div>
+
+   </div >
+   
+    </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
