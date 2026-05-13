@@ -1,0 +1,378 @@
+/* 
+.epilogue-<uniquifier> {
+  font-family: "Epilogue", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+} */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html,
+body{
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body{
+  font-family:'Epilogue', sans-serif;
+  background:hsl(0, 0%, 98%);
+  color:hsl(0, 0%, 8%);
+  overflow-x:hidden;
+}
+
+img{
+  display:block;
+  max-width:100%;
+}
+
+button{
+  font-family:inherit;
+  cursor:pointer;
+  border:none;
+  background:none;
+}
+
+a{
+  text-decoration:none;
+  color:hsl(0, 0%, 41%);
+}
+
+/* HEADER */
+
+.header{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:20px 40px;
+}
+
+.logo{
+  font-size:2rem;
+  font-weight:700;
+}
+
+.desktop-nav{
+  display:flex;
+  align-items:center;
+  gap:35px;
+  margin-left:50px;
+  flex:1;
+}
+
+.desktop-nav a:hover{
+  color:black;
+}
+
+.auth{
+  display:flex;
+  align-items:center;
+  gap:20px;
+}
+
+.login-btn{
+  color:hsl(0, 0%, 41%);
+}
+
+.register-btn{
+  border:1px solid hsl(0, 0%, 41%);
+  padding:12px 22px;
+  border-radius:14px;
+  color:hsl(0, 0%, 41%);
+}
+
+.register-btn:hover{
+  color:black;
+  border-color:black;
+}
+
+/* DROPDOWN */
+
+.dropdown{
+  position:relative;
+}
+
+.dropdown-btn{
+  display:flex;
+  align-items:center;
+  gap:6px;
+  color:hsl(0, 0%, 41%);
+}
+
+.dropdown-btn:hover{
+  color:black;
+}
+
+.dropdown-menu{
+  position:absolute;
+  top:45px;
+  left:-40px;
+  background:white;
+  padding:20px;
+  border-radius:12px;
+  width:160px;
+  display:none;
+  flex-direction:column;
+  gap:15px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.1);
+}
+
+.dropdown-menu.small{
+  width:130px;
+  left:0;
+}
+
+.dropdown-menu a{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+.dropdown.active .dropdown-menu{
+  display:flex;
+}
+
+/* HERO */
+
+.hero{
+  max-width:1200px;
+  margin:auto;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:100px;
+  padding-inline:40px;
+  padding-block:10px;
+  min-height:calc(100vh - 90px);
+}
+
+
+.hero-text{
+  flex:1;
+  margin-top:80px;
+}
+
+.hero-text h1{
+  font-size:4.6rem;
+  font-weight: 700;
+  line-height:1;
+  margin-bottom:30px;
+}
+
+.hero-text p{
+  max-width:450px;
+  line-height:1.7;
+  color:hsl(0, 0%, 41%);
+  margin-bottom:40px;
+  font-size:18px;
+}
+
+.desktop-break{
+  display:none;
+}
+
+.learn-btn{
+  background:black;
+  color:white;
+  padding:18px 32px;
+  border-radius:16px;
+  font-weight:700;
+  border:1px solid black;
+  margin-bottom:100px;
+}
+
+.learn-btn:hover{
+  background:transparent;
+  color:black;
+}
+
+.clients{
+  display:flex;
+  align-items:center;
+  gap:40px;
+}
+
+.hero-image{
+  flex:1;
+}
+
+.hero-image img{
+  width:100%;
+  max-width:500px;
+  max-height:80vh;
+  object-fit:contain;
+  margin:auto;
+  display:block;
+}
+
+/* MOBILE MENU */
+
+.menu-btn{
+  display:none;
+  font-size:2rem;
+}
+
+.mobile-menu{
+  position:fixed;
+  top:0;
+  right:-100%;
+  width:65%;
+  height:100vh;
+  background:white;
+  z-index:1000;
+  padding:30px;
+  transition:0.4s;
+  overflow-y:auto;
+}
+
+.mobile-menu.active{
+  right:0;
+}
+
+.close-btn{
+  font-size:2rem;
+  display:block;
+  margin-left:auto;
+  margin-bottom:40px;
+}
+
+.mobile-links{
+  display:flex;
+  flex-direction:column;
+  gap:25px;
+}
+
+.mobile-dropdown-btn{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  color:hsl(0, 0%, 41%);
+}
+
+.mobile-dropdown-content{
+  display:none;
+  flex-direction:column;
+  gap:18px;
+  padding-left:20px;
+  margin-top:20px;
+}
+
+.mobile-dropdown.active .mobile-dropdown-content{
+  display:flex;
+}
+
+.mobile-dropdown-content a{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+.mobile-auth{
+  margin-top:20px;
+  display:flex;
+  flex-direction:column;
+  gap:15px;
+  text-align:center;
+}
+
+.mobile-auth .register-btn{
+  width:100%;
+}
+
+/* OVERLAY */
+
+.overlay{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.5);
+  display:none;
+  z-index:999;
+}
+
+.overlay.active{
+  display:block;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+  .desktop-nav,
+  .desktop-auth{
+    display:none;
+  }
+
+  .menu-btn{
+    display:block;
+  }
+
+  .hero{
+    flex-direction:column-reverse;
+    text-align:center;
+    gap:40px;
+  }
+
+  .hero-text{
+    margin-top:0;
+    padding:0 20px;
+  }
+
+  .hero-text h1{
+    font-size:1.8rem;
+    margin-bottom:25px;
+    width: 300px;
+  }
+
+  .hero-text p{
+    max-width:100%;
+    font-size:14px;
+    margin-bottom: 25px;
+  }
+
+  .desktop-break{
+  display:none;
+  }
+
+  .learn-btn{
+   margin-bottom:40px;
+   padding:12px 24px;
+  }
+
+  .clients{
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+  }
+
+  .clients img{
+  width:60px;
+  }
+
+  .hero-image img{
+    content:url('./images/image-hero-mobile.png');
+    max-width:100%;
+  }
+
+  .header{
+    padding:20px;
+  }
+
+  .mobile-links{
+  gap:10px;
+  font-size: 12px;
+}
+
+.mobile-dropdown-content{
+  gap:10px;
+  margin-top:12px;
+}
+
+.register-btn{
+  padding:7px 34px;
+}
+}
+
